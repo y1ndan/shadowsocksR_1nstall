@@ -4,7 +4,7 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6,7, Debian, Ubuntu                  #
 #   Description: One click Install ShadowsocksR Server            #
-#   Author: Sherlockwoo                                                 #
+#   Author: Sherlockwoo                                           #
 #   Thanks: @breakwa11 <https://twitter.com/breakwa11>            #
 #   Thanks: @Teddysun <i@teddysun.com>                            #
 #   Intro:  https://shadowsocks.be/9.html                         #
@@ -15,11 +15,11 @@ echo -e "\033[34m===============================================================
 
 \033[31m                     欢迎使用shadowsocksR一键脚本                         \033[0m
 
-\033[31m              本脚本仅供个人学习交流使用，请勿用于非法用途！                 \033[0m
+\033[31m                        从现在开始，变成一只猫！                 \033[0m
 
 \033[31m                                                   By:Sherlockwoo        \033[0m
 
-\033[31m                             Starting Now...                             \033[0m
+\033[31m                            Starting Now...                             \033[0m
 \033[34m================================================================\033[0m";
 echo
 
@@ -274,10 +274,10 @@ function install_ss(){
         echo -e "协议: \033[41;37m http_simple \033[0m"
         echo -e "加密方式: \033[41;37m chacha20 \033[0m"
         echo
-        echo "如果你想改变认证方式和协议，请参考网址："
+        echo "如果你想改变认证方式和协议，请参考以下WIKI："
         echo "https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup"
         echo
-        echo "安装完成！Enjoy yourself!"
+        echo "Enjoy yourself!"
         echo
     else
         echo "ShadowsocksR安装失败！"
@@ -305,7 +305,7 @@ function install_cleanup(){
 
 # Uninstall ShadowsocksR
 function uninstall_shadowsocks(){
-    printf "你确定卸载shadowsocksr？ (y/n) "
+    printf "确定要卸载shadowsocksR? (y/n) "
     printf "\n"
     read -p "(Default: n):" answer
     if [ -z $answer ]; then
