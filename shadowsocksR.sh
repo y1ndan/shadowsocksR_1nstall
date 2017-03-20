@@ -4,7 +4,7 @@ export PATH
 #=================================================================#
 #   System Required:  CentOS 6,7, Debian, Ubuntu                  #
 #   Description: One click Install ShadowsocksR Server            #
-#   Author: 91yun                                                 #
+#   Author: Sherlockwoo                                                 #
 #   Thanks: @breakwa11 <https://twitter.com/breakwa11>            #
 #   Thanks: @Teddysun <i@teddysun.com>                            #
 #   Intro:  https://shadowsocks.be/9.html                         #
@@ -153,18 +153,18 @@ function download_files(){
         exit 1
     fi
     # Download ShadowsocksR file
-    # if ! wget --no-check-certificate -O shadowsocksr-manyuser.zip https://github.com/shadowsocksr/shadowsocksr/archive/manyuser.zip; then
+    # if ! wget --no-check-certificate -O manyuser.zip https://github.com/shadowsocksr/shadowsocksr/archive/manyuser.zip; then
         # echo "Failed to download ShadowsocksR file!"
         # exit 1
     # fi
     # Download ShadowsocksR chkconfig file
     if [ "$OS" == 'CentOS' ]; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/Sherlockwoo/shadowsocksR-ONEKEY/master/shadowsocksR -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/Sherlockwoo/shadowsocksR-1nstall/master/shadowsocksR -O /etc/init.d/shadowsocks; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
     else
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/Sherlockwoo/shadowsocksR-ONEKEY/master/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/Sherlockwoo/shadowsocksR-1nstall/master/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
             echo "Failed to download ShadowsocksR chkconfig file!"
             exit 1
         fi
@@ -240,8 +240,8 @@ EOF
 # Install ShadowsocksR
 function install_ss(){
     # Install libsodium
-    tar zxf libsodium-1.0.10.tar.gz
-    cd $cur_dir/libsodium-1.0.10
+    tar zxf libsodium-1.0.12.tar.gz
+    cd $cur_dir/libsodium-1.0.12
     ./configure && make && make install
     echo "/usr/local/lib" > /etc/ld.so.conf.d/local.conf
     ldconfig
@@ -274,13 +274,13 @@ function install_ss(){
         echo -e "协议: \033[41;37m http_simple \033[0m"
         echo -e "加密方式: \033[41;37m chacha20 \033[0m"
         echo
-        echo "如果你想改变认证方式和协议，请参考网址"
+        echo "如果你想改变认证方式和协议，请参考网址："
         echo "https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup"
         echo
-        echo "安装完成！现在就开始你的自由之旅吧！"
+        echo "安装完成！Enjoy yourself!"
         echo
     else
-        echo "Shadowsocks安装失败！"
+        echo "ShadowsocksR安装失败！"
         install_cleanup
         exit 1
     fi
@@ -298,8 +298,8 @@ function install_cleanup(){
     cd $cur_dir
     rm -f manyuser.zip
     rm -rf shadowsocks-manyuser
-    rm -f libsodium-1.0.10.tar.gz
-    rm -rf libsodium-1.0.10
+    rm -f libsodium-1.0.12.tar.gz
+    rm -rf libsodium-1.0.12
 }
 
 
