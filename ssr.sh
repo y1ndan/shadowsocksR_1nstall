@@ -239,8 +239,8 @@ Set_config_port(){
 }
 Set_config_password(){
 	echo "请输入要设置的ShadowsocksR账号 密码"
-	stty erase '^H' && read -p "(默认: doub.io):" ssr_password
-	[[ -z "${ssr_password}" ]] && ssr_password="doub.io"
+	stty erase '^H' && read -p "(默认: supercell):" ssr_password
+	[[ -z "${ssr_password}" ]] && ssr_password="supercell"
 	echo && echo ${Separator_1} && echo -e "	密码 : ${Green_font_prefix}${ssr_password}${Font_color_suffix}" && echo ${Separator_1} && echo
 }
 Set_config_method(){
