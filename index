@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+
+		<title>
+			WHUT 一键评教
+		</title>
+	</head>
+	<body>
+	
+<div class="modal show">
+<div class="modal-dialog">
+<div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-center text-primary">一键评教</h2>
+      </div>
+      <div class="modal-body">
+		<div>
+        <form action="/" class="form-horizontal col-md-12 " method="POST">
+			<input type='hidden' name='csrfmiddlewaretoken' value='Lsu1wpGoJvLATKHuF1MihnvOcxtciOan' />
+          <div class="form-group">
+            <input type="text" name="id" class="form-control input-lg" placeholder="学号">
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control input-lg" placeholder="密码">
+          </div>
+          <div class="form-group">
+			  <button  class="btn btn-primary btn-lg btn-block">确定</button>
+			          </div>
+        </form>
+		<div>
+	</div>
+    <div class="modal-footer">
+		<div class="footer-info" style="text-align: center">
+			<div class="copyright">
+				<a href="http://gyh.me">&copy gyh.me</a> &nbsp;&nbsp; <a href="#" data-toggle="modal" data-target="#terms" >免责声明</a>
+			</div>
+		</div>
+    </div>
+</div>	
+</div>	
+</div>	
+
+
+
+
+
+<div class="modal fade" id="terms" tabindex="-1" role="dialog" >
+  <div class="modal-dialog modal-xs">
+    <div class="modal-content">
+      <div class="modal-header">
+		 <div class="modal-header">
+		   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		   <h3 class="modal-title" id="myModalLabel">免责声明</h3>
+      </div>
+      <div class="modal-body">
+		  <ul style="font-size: 18px; font-family:Georgia">
+			  <li>使用前请认真阅读本声明，使用者默认同意以下内容</li>
+			  <li>评教数据来源于教务处系统</li>
+			  <li>你的个人信息不会被储存和泄露</li>
+			  <li>使用者因使用一键评教所产生的影响及后果由其本人承担，开发者不承担任何责任(包括法律责任)</li>
+			  <li>有时可能因网络问题造成评教失败</li>
+		  </ul>
+	  </div>
+  	</div>
+  </div>
+</div>
+
+
+
+	</body>
+</html>
