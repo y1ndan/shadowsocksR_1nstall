@@ -2,11 +2,6 @@
 
 本脚本修改于 teddysun 的一键脚本： https://shadowsocks.be/9.html
 
-##安装方法##：
-----
-wget https://raw.githubusercontent.com/Sherlockwoo/shadowsocksR_1nstall/master/shadowsocksR.sh && bash shadowsocksR.sh
-
---------------------------------------------------------------------
 
 ## 系统要求 ##
 
